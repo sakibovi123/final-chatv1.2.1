@@ -1,0 +1,7 @@
+<form action="" method="POST">
+    {% csrf_token %}
+    <h3>Start Chat With {{get_user_2.username}}</h3>
+    <input type="text" name="first_person" value="{{ request.user }}">
+    <input type="text" name="second_person" value="{{ get_user_2.username }}">
+    <button type="submit">Start Chat</button>
+</form>
